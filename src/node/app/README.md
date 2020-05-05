@@ -17,16 +17,16 @@ arguments when launching code-server with Docker. See
 ## Extensions
 
 `code-server` does not provide access to the official
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode). Instead,
-Coder has created a custom extension marketplace that we manage for open-source
-extensions. If you want to use an extension with code-server that we do not have
-in our marketplace please look for a release in the extension’s repository,
-contact us to see if we have one in the works or, if you build an extension
-locally from open source, you can copy it to the `extensions` folder. If you
-build one locally from open-source please contribute it to the project and let
-us know so we can give you props! If you have your own custom marketplace, it is
-possible to point code-server to it by setting the `SERVICE_URL` and `ITEM_URL`
-environment variables.
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode).
+Instead, Coder has created a custom extension marketplace that we manage for
+open-source extensions. If you want to use an extension with code-server that we
+do not have in our marketplace please look for a release in the extension’s
+repository, contact us to see if we have one in the works or, if you build an
+extension locally from open source, you can copy it to the `extensions` folder.
+If you build one locally from open-source please contribute it to the project
+and let us know so we can give you props! If you have your own custom
+marketplace, it is possible to point code-server to it by setting the
+`SERVICE_URL` and `ITEM_URL` environment variables.
 
 ## Development: upgrading VS Code
 
@@ -42,8 +42,9 @@ To generate a new patch, **stage all the changes** you want to be included in
 the patch in the VS Code source, then run `yarn patch:generate` in this
 directory.
 
-Our changes include:
+Notable changes include:
 
+- Add our own build file which includes our code and VS Code's web code.
 - Allow multiple extension directories (both user and built-in).
 - Modify the loader, websocket, webview, service worker, and asset requests to
   use the URL of the page as a base (and TLS if necessary for the websocket).
@@ -51,8 +52,8 @@ Our changes include:
 - Make changing the display language work.
 - Make it possible for us to load code on the client.
 - Make extensions work in the browser.
+- Make it possible to install extensions of any kind.
 - Fix getting permanently disconnected when you sleep or hibernate for a while.
-- Make it possible to automatically update the binary.
 - Add connection type to web socket query parameters.
 
 ## Future
