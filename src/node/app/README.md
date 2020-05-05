@@ -17,16 +17,16 @@ arguments when launching code-server with Docker. See
 ## Extensions
 
 `code-server` does not provide access to the official
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode). Instead,
-Coder has created a custom extension marketplace that we manage for open-source
-extensions. If you want to use an extension with code-server that we do not have
-in our marketplace please look for a release in the extension’s repository,
-contact us to see if we have one in the works or, if you build an extension
-locally from open source, you can copy it to the `extensions` folder. If you
-build one locally from open-source please contribute it to the project and let
-us know so we can give you props! If you have your own custom marketplace, it is
-possible to point code-server to it by setting the `SERVICE_URL` and `ITEM_URL`
-environment variables.
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode).
+Instead, Coder has created a custom extension marketplace that we manage for
+open-source extensions. If you want to use an extension with code-server that we
+do not have in our marketplace please look for a release in the extension’s
+repository, contact us to see if we have one in the works or, if you build an
+extension locally from open source, you can copy it to the `extensions` folder.
+If you build one locally from open-source please contribute it to the project
+and let us know so we can give you props! If you have your own custom
+marketplace, it is possible to point code-server to it by setting the
+`SERVICE_URL` and `ITEM_URL` environment variables.
 
 ## Development: upgrading VS Code
 
